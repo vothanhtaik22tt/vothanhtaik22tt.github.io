@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit-reservation" method="post">
+        <h1>Guest Reservation</h1>
+        
+        <fieldset>
+            <legend>General Information</legend>
+            Arrival Date: <input type="date" name="arrival"><br>
+            Nights: <input type="number" name="nights"><br>
+            Adults: 
+            <select name="adults">
+                <option value="1">1</option>
+                <!-- Thêm các tùy chọn khác nếu cần -->
+            </select><br>
+            Children: 
+            <select name="children">
+                <option value="0">0</option>
+                <!-- Thêm các tùy chọn khác nếu cần -->
+            </select><br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Preferences</legend>
+            
+            Room type:<br> 
+            <input type="radio" id="standard" name="roomType" value="standard">
+              <label for="standard">Standard</label><br>
+            <input type="radio" id="Buisiness" name="roomType" value="Buisiness">
+              <label for="Buisiness">Buisiness</label><br>
+            <input type="radio" id="Suite" name="roomType" value="Suite">
+              <label for="Suite">Suite</label><br>             
+            Bed Type:<br>
+            <input type="radio" id="king" name="bedType" value="king">
+                <label for="king">King</label><br>
+            <input type="radio" id="doubledouble" name="bedType" value="doubledouble">
+                <label for="doubledouble">Double Double</label><br>
+            <input type="checkbox" id="smoking" name="smoking"checked>
+                <label for="smoking">Smoking</label>
+        </fieldset>
+    
+        Contact Information<br> 
+        Name: 	<input type='text' name='name'><br> 
+        Email: 	<input type='email' name='email'><br> 
+        Phone: 	<input type='tel' name='phone'><br>
+    
+          <input type='submit' value='Submit Reservation'>
+    </form>    
+
+</body>
+</html>
