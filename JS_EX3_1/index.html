@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Guidelines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .details {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .details-summary {
+            cursor: pointer;
+            background-color: plum;
+            padding: 10px;
+            border: 5px solid purple;
+            border-radius: 5px;
+        }
+        .details-content {
+            display: none;
+            padding: 10px;
+            border-top: none;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .details-content.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Homework guidelines</h1>
+
+<h2>Late Days</h2>
+<p>Homework turned in on-time will get a small on-time bonus. Homework can be turned in up to 48 hours past the deadline without penalty.</p>
+
+<div class="details">
+    <div class="details-summary" onclick="toggleDetails()">Show details</div>
+    <div class="details-content">
+        <ul>
+            <li>Homework will not be accepted past the late cutoff. You will receive a 0 for the assignment if it is not turned in by the late cutoff.</li>
+            <li>If you are not sure whether you can finish the assignment by the late cutoff, you should turn it in before the deadline anyway to get partial credit. You are allowed to update your GitHub homework submission as many times as you need to before the late cutoff.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleDetails() {
+        var content = document.querySelector('.details-content');
+        var summary = document.querySelector('.details-summary');
+        if (content.classList.contains('visible')) {
+            content.classList.remove('visible');
+            summary.textContent = 'Show details';
+        } else {
+            content.classList.add('visible');
+            summary.textContent = 'Hide details';
+        }
+    }
+</script>
+
+</body>
+</html>
+
